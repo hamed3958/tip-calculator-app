@@ -2,60 +2,63 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Hamed Asadi Asl">
-    <title>HAA-tip-calculator-app</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Hamed Asadi Asl">
+  <title>HAA-tip-calculator-app</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <img src="images/logo.svg" alt="logo" class="logo">
-    <div class="container">
-        <div class="container1">
-            <p class="bill-p">Bill</p>
-            <input type="text" id="bill-input" dir="rtl" placeholder="0">
-            <p>Select Tips %</p>
-            <div class="btn-holder">
-                <button type="button">5%</button>
-                <button type="button">5%</button>
-                <button type="button">5%</button>
-                <button type="button">5%</button>
-                <button type="button">5%</button>
-                <input type="text" id="little-input" placeholder="Custom" dir="rtl">
-            </div>
-            <p>Number Of People</p>
-            <input type="text" id="people-input" dir="rtl" placeholder="0" required>
-        </div>
-        <div class="container2">
-
-            <div class="holder">
-                <div class="p-holder">
-                    <p>Tip Amount</p>
-                    <p class="small-font">/ person</p>
-                </div>
-                <h1>$0.00</h1>
-            </div>
-
-            <div class="holder">
-                <div class="p-holder">
-                    <p>Total</p>
-                    <p class="small-font">/ person</p>
-                </div>
-                <h1>$0.00</h1>
-            </div>
-
-            <button type="button" id="reset-btn">RESET</button>
-
-        </div>
+  <div id="img-div">
+    <img src="images/logo.svg" alt="logo">
+  </div>
+  
+  <div class="container">
+    <div class="container1">
+      <p class="bill-p">Bill</p>
+      <input type="text" id="bill-input" dir="rtl" placeholder="0">
+      <p>Select Tips %</p>
+      <div class="btn-holder">
+        <button type="button">5%</button>
+        <button type="button">10%</button>
+        <button type="button">15%</button>
+        <button type="button">25%</button>
+        <button type="button">50%</button>
+        <input type="text" id="little-input" placeholder="Custom" dir="rtl">
+      </div>
+      <p>Number Of People</p>
+      <input type="text" id="people-input" dir="rtl" placeholder="0" required>
     </div>
+    <div class="container2">
+
+      <div class="holder">
+        <div class="p-holder">
+          <p>Tip Amount</p>
+          <p class="small-font">/ person</p>
+        </div>
+        <h1>$0.00</h1>
+      </div>
+
+      <div class="holder">
+        <div class="p-holder">
+          <p>Total</p>
+          <p class="small-font">/ person</p>
+        </div>
+        <h1>$0.00</h1>
+      </div>
+
+      <button type="button" id="reset-btn">RESET</button>
+
+    </div>
+  </div>
 </body>
 
 </html>

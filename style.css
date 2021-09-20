@@ -6,24 +6,29 @@ html {
 }
 
 body {
-  background-color: #C5E4E7;
-  font-family: 'Space Mono', monospace;
+  background-color: #c5e4e7;
+  font-family: "Space Mono", monospace;
   font-weight: bold;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo {
-  margin: 60px 0 35px 677px;
+#img-div {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
-  Width: 920px;
-  Height: 481px;
-  background-color: #FFFFFF;
+  width: 920px;
+  height: 481px;
+  background-color: #ffffff;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  margin: 0 260px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 25px;
   padding: 32px;
 }
@@ -37,7 +42,7 @@ body {
 }
 
 .container2 {
-  background-color: #00474B;
+  background-color: #00474b;
   width: 413px;
   height: 417px;
   display: flex;
@@ -50,21 +55,21 @@ body {
 /*****************************************.container1*************************/
 
 input {
-  background-color: #F3F9FA;
+  background-color: #f3f9fa;
   width: 380px;
   height: 48px;
-  border: 1px solid #F3F9FA;
+  border: 1px solid #f3f9fa;
   border-radius: 5px;
   padding: 5px 3px;
   transition: 0.3s;
   font-size: 24px;
   font-weight: bold;
-  color: #00474B;
+  color: #00474b;
 }
 
 input:focus {
   outline: none !important;
-  border: 2px solid #26C2AE;
+  border: 2px solid #26c2ae;
 }
 
 #little-input {
@@ -75,7 +80,7 @@ input:focus {
 }
 
 #bill-input {
-  background-image: url('images/icon-dollar.svg');
+  background-image: url("images/icon-dollar.svg");
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: 15px;
@@ -83,7 +88,7 @@ input:focus {
 }
 
 #people-input {
-  background-image: url('images/icon-person.svg');
+  background-image: url("images/icon-person.svg");
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: 15px;
@@ -93,18 +98,18 @@ button {
   cursor: pointer;
   width: 117px;
   height: 48px;
-  background-color: #00474B;
-  color: #FFFFFF;
-  border: 1px solid #00474B;
+  background-color: #00474b;
+  color: #ffffff;
+  border: 1px solid #00474b;
   border-radius: 5px;
   font-size: 24px;
   font-weight: bold;
 }
 
 button:hover {
-  background-color: #9FE8DF;
-  color: #00474B;
-  border: 1px solid #9FE8DF;
+  background-color: #9fe8df;
+  color: #00474b;
+  border: 1px solid #9fe8df;
 }
 
 .btn-holder {
@@ -116,31 +121,31 @@ button:hover {
   padding: 10px 0;
 }
 
-p+input {
+p + input {
   margin-right: 50px;
 }
 
-.container1>p {
-  color: #5E7A7D;
+.container1 > p {
+  color: #5e7a7d;
 }
 
 /****************************************************container2***********************************/
 
 .small-font {
   font-size: 13px;
-  color: #7F9D9F !important;
+  color: #7f9d9f !important;
 }
 
 .p-holder {
   padding-top: 20px;
 }
 
-.p-holder>p {
-  color: #FFFFFF;
+.p-holder > p {
+  color: #ffffff;
 }
 
-.holder>h1 {
-  color: #26C2AE;
+.holder > h1 {
+  color: #26c2ae;
   font-size: 48px;
 }
 
@@ -155,8 +160,54 @@ p+input {
 #reset-btn {
   width: 333px;
   height: 48px;
-  background-color: #26C2AE;
-  color: #00474B;
+  background-color: #26c2ae;
+  color: #00474b;
   font-size: 20px;
   margin-top: 122px;
+  border: 1px solid #00474b;
+}
+
+#reset-btn:hover {
+  color: #ffffff;
+}
+
+/*************************** media query ****************************/
+
+@media screen and (max-width: 920px) {
+  .container {
+    width: 375px;
+    height: 789px;
+    padding: 24px;
+  }
+  .container1 {
+    width: 375px;
+    padding: 20px 32px;
+  }
+  .container2 {
+    width: 327px;
+    height: 256px;
+    padding: 37px 24px;
+    margin-top: 32px;
+  }
+  input {
+    width: 310px;
+  }
+  #bill-input {
+    margin-bottom: 32px;
+  }
+  button,
+  #little-input {
+    margin: 5px 0;
+    width: 146px;
+    height: 48px;
+  }
+  .btn-holder {
+    height: auto;
+    margin-bottom: 32px;
+  }
+  #reset-btn {
+    width: 281px;
+    height: 48px;
+    margin-top: 0;
+  }
 }
