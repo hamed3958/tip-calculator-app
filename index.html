@@ -20,21 +20,23 @@
   <div id="img-div">
     <img src="images/logo.svg" alt="logo">
   </div>
-  
+
   <div class="container">
     <div class="container1">
       <p class="bill-p">Bill</p>
-      <input type="text" id="bill-input" dir="rtl" placeholder="0">
+      <p class="error1">Can't be zero !</p>
+      <input type="text" id="bill-input" dir="rtl" placeholder="0" required autofocus>
       <p>Select Tips %</p>
       <div class="btn-holder">
-        <button type="button">5%</button>
-        <button type="button">10%</button>
-        <button type="button">15%</button>
-        <button type="button">25%</button>
-        <button type="button">50%</button>
-        <input type="text" id="little-input" placeholder="Custom" dir="rtl">
+        <button type="button" onclick="tipCounter (0.05)" >5%</button>
+        <button type="button" onclick="tipCounter (0.10)" >10%</button>
+        <button type="button" onclick="tipCounter (0.15)" >15%</button>
+        <button type="button" onclick="tipCounter (0.25)" >25%</button>
+        <button type="button" onclick="tipCounter (0.50)" >50%</button>
+        <input type="text" id="little-input" placeholder="Custom" dir="rtl" onkeydown="tipCounter (value/100)">
       </div>
       <p>Number Of People</p>
+      <p class="error2">Can't be zero !</p>
       <input type="text" id="people-input" dir="rtl" placeholder="0" required>
     </div>
     <div class="container2">
@@ -44,7 +46,7 @@
           <p>Tip Amount</p>
           <p class="small-font">/ person</p>
         </div>
-        <h1>$0.00</h1>
+        <h1 id="amount">$0.00</h1>
       </div>
 
       <div class="holder">
@@ -52,13 +54,16 @@
           <p>Total</p>
           <p class="small-font">/ person</p>
         </div>
-        <h1>$0.00</h1>
+        <h1 id="total">$0.00</h1>
       </div>
 
-      <button type="button" id="reset-btn">RESET</button>
+      <button type="button" id="reset-btn" onclick="reset()">RESET</button>
 
     </div>
   </div>
+
+  <script src="main.js"></script>
+
 </body>
 
 </html>

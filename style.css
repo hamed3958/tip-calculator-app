@@ -104,6 +104,7 @@ button {
   border-radius: 5px;
   font-size: 24px;
   font-weight: bold;
+  transition-duration: 0.5s;
 }
 
 button:hover {
@@ -169,6 +170,12 @@ p + input {
 
 #reset-btn:hover {
   color: #ffffff;
+}
+
+.error1 , .error2{
+  visibility: hidden;
+  margin-left: auto;
+  color: red !important;
 }
 
 /*************************** media query ****************************/
