@@ -26,10 +26,11 @@ Users should be able to:
 I used this condition to declare need to filling inputs, which disappears after 1.5 seconds :
 
 ```js
-if (bill.value <= 0) {
-    document.querySelector('.error1').style.visibility = 'visible';
+if (people.value <= 0) {
+    document.querySelector('.error2').style.visibility = 'visible';
+    document.querySelector("#people-input").focus();
     setTimeout(() => {
-      document.querySelector('.error1').style.visibility = 'hidden';
+      document.querySelector('.error2').style.visibility = 'hidden';
     }, 1500);
 ```
 
