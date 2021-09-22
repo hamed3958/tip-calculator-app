@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Hamed Asadi Asl">
-  <title>HAA-tip-calculator-app</title>
+  <title>Tip calculator app (HAA)</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,19 +26,19 @@
     <div class="container1">
       <p class="bill-p">Bill</p>
       <p class="error1">Can't be zero !</p>
-      <input type="text" id="bill-input" dir="rtl" placeholder="0" required autofocus>
+      <input type="number" id="bill-input" dir="rtl" placeholder="0" required autofocus>
       <p>Select Tips %</p>
       <div class="btn-holder">
-        <button type="button" onclick="tipCounter (0.05)" >5%</button>
-        <button type="button" onclick="tipCounter (0.10)" >10%</button>
-        <button type="button" onclick="tipCounter (0.15)" >15%</button>
-        <button type="button" onclick="tipCounter (0.25)" >25%</button>
-        <button type="button" onclick="tipCounter (0.50)" >50%</button>
-        <input type="text" id="little-input" placeholder="Custom" dir="rtl" onkeydown="tipCounter (value/100)">
+        <button type="button" onclick="tipCounter (0.05)">5%</button>
+        <button type="button" onclick="tipCounter (0.10)">10%</button>
+        <button type="button" onclick="tipCounter (0.15)">15%</button>
+        <button type="button" onclick="tipCounter (0.25)">25%</button>
+        <button type="button" onclick="tipCounter (0.50)">50%</button>
+        <input type="number" id="little-input" placeholder="Custom" dir="rtl" onkeydown="tipCounter (value/100)">
       </div>
       <p>Number Of People</p>
       <p class="error2">Can't be zero !</p>
-      <input type="text" id="people-input" dir="rtl" placeholder="0" required>
+      <input type="number" id="people-input" dir="rtl" placeholder="0" required>
     </div>
     <div class="container2">
 
@@ -60,6 +61,11 @@
       <button type="button" id="reset-btn" onclick="reset()">RESET</button>
 
     </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="http://hamedasadiasl.ir/" target="_blank">Hamed Asadi Asl</a>.
   </div>
 
   <script src="main.js"></script>

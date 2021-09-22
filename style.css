@@ -15,6 +15,17 @@ body {
   justify-content: center;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 #img-div {
   margin: 50px 0;
   display: flex;
@@ -55,7 +66,7 @@ body {
 /*****************************************.container1*************************/
 
 input {
-  background-color: #f3f9fa;
+  background-color: #bbf5f5;
   width: 380px;
   height: 48px;
   border: 1px solid #f3f9fa;
@@ -172,10 +183,20 @@ p + input {
   color: #ffffff;
 }
 
-.error1 , .error2{
+.error1,
+.error2 {
   visibility: hidden;
   margin-left: auto;
   color: red !important;
+}
+
+.attribution {
+  margin-top: 50px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 /*************************** media query ****************************/
