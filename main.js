@@ -9,36 +9,40 @@ function percentCounter(value) {
 }
 
 function tipCounter() {
-  if (bill.value > 0 && people.value > 0) {
+  if (bill.value > 0 && people.value > 0 && percent > 0) {
     let result = bill.value * percent / people.value;
     let totalResult = bill.value * percent;
-    amount.innerHTML = result.toFixed(2);
-    total.innerHTML = totalResult.toFixed(2);
+    amount.innerHTML = ("$" + result.toFixed(2));
+    total.innerHTML = ("$" + totalResult.toFixed(2));
   } else if (bill.value <= 0) {
     document.querySelector('.error1').style.visibility = 'visible';
     setTimeout(() => {
       document.querySelector('.error1').style.visibility = 'hidden';
     }, 1500);
-    // alert("Bill input can't be zero !")
+  } else if (percent <= 0) {
+    document.querySelector('.error3').style.visibility = 'visible';
+    setTimeout(() => {
+      document.querySelector('.error3').style.visibility = 'hidden';
+    }, 1500);
   } else if (people.value <= 0) {
     document.querySelector('.error2').style.visibility = 'visible';
-    document.querySelector("#people-input");
     setTimeout(() => {
       document.querySelector('.error2').style.visibility = 'hidden';
     }, 1500);
-    // alert("Number of people input can't be zero !")
   }
 }
 
 function reset() {
+  percent = 0;
   bill.value = null;
   people.value = null;
   total.innerHTML = "$0.00";
   amount.innerHTML = "$0.00";
   document.getElementById("little-input").value = "";
-  document.querySelector('.error1').style.visibility = 'hidden';
-  document.querySelector('.error2').style.visibility = 'hidden';
-  document.getElementsByClassName("active")[0].classList.remove("active");
+  if (document.getElementsByClassName("active")[0]) {
+    document.getElementsByClassName("active")[0].classList.remove("active");
+  }
+
 }
 
 //  btn active  //
