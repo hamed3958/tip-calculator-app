@@ -26,19 +26,19 @@
     <div class="container1">
       <p class="bill-p">Bill</p>
       <p class="error1">Can't be zero !</p>
-      <input type="number" id="bill-input" dir="rtl" placeholder="0" required autofocus>
+      <input type="number" id="bill-input" dir="rtl" placeholder="0" required autofocus onkeyup="tipCounter()">
       <p>Select Tips %</p>
       <div class="btn-holder">
-        <button type="button" onclick="tipCounter (0.05)">5%</button>
-        <button type="button" onclick="tipCounter (0.10)">10%</button>
-        <button type="button" onclick="tipCounter (0.15)">15%</button>
-        <button type="button" onclick="tipCounter (0.25)">25%</button>
-        <button type="button" onclick="tipCounter (0.50)">50%</button>
-        <input type="number" id="little-input" placeholder="Custom" dir="rtl" onkeydown="tipCounter (value/100)">
+        <button type="button" onclick="percentCounter(0.05)" class="btn">5%</button>
+        <button type="button" onclick="percentCounter(0.10)" class="btn">10%</button>
+        <button type="button" onclick="percentCounter(0.15)" class="btn">15%</button>
+        <button type="button" onclick="percentCounter(0.25)" class="btn">25%</button>
+        <button type="button" onclick="percentCounter(0.50)" class="btn">50%</button>
+        <input type="number" id="little-input" placeholder="Custom" dir="rtl" onclick="percentCounter(value)" class="btn">
       </div>
       <p>Number Of People</p>
       <p class="error2">Can't be zero !</p>
-      <input type="number" id="people-input" dir="rtl" placeholder="0" required>
+      <input type="number" id="people-input" dir="rtl" placeholder="0" required onkeyup="tipCounter()">
     </div>
     <div class="container2">
 
