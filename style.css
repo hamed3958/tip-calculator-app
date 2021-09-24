@@ -50,6 +50,7 @@ input[type="number"] {
   display: flex;
   flex-flow: row wrap;
   justify-content: start;
+  padding: 13px 16px 16px 16px;
 }
 
 .container2 {
@@ -71,10 +72,11 @@ input {
   height: 48px;
   border: 1px solid #f3f9fa;
   border-radius: 5px;
-  padding: 5px 3px;
+  padding: 5px 15px;
   transition: 0.3s;
   font-size: 24px;
   font-weight: bold;
+  font-family: "Space Mono", monospace;
   color: #00474b;
 }
 
@@ -115,6 +117,7 @@ button {
   border-radius: 5px;
   font-size: 24px;
   font-weight: bold;
+  font-family: "Space Mono", monospace;
   transition-duration: 0.5s;
 }
 
@@ -125,21 +128,20 @@ button {
 }
 
 .btn-holder {
-  width: 379px;
+  width: 380px;
   height: 152px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 10px 0;
 }
 
-p + input {
-  margin-right: 50px;
+.con1-p{
+  margin-bottom: 6px;
+  color: #5e7a7d;
+  font-size: 16px;
 }
 
-.container1 > p {
-  color: #5e7a7d;
-}
 
 /****************************************************container2***********************************/
 
@@ -156,11 +158,10 @@ p + input {
   color: #ffffff;
 }
 
-.holder > h1 {
+.con2-h1 {
   color: #26c2ae;
   font-size: 48px;
-  max-width: 220px;
-  display:inline; 
+  max-width: 220px; 
 }
 
 .holder {

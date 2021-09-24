@@ -24,11 +24,11 @@
 
   <div class="container">
     <div class="container1">
-      <p class="bill-p">Bill</p>
-      <p class="error1">Can't be zero !</p>
+      <p class="con1-p">Bill</p>
+      <p class="error1 con1-p">Can't be zero !</p>
       <input type="number" id="bill-input" dir="rtl" placeholder="0" required autofocus onkeyup="tipCounter()">
-      <p>Select Tips %</p>
-      <p class="error3">Can't be zero !</p>
+      <p class="con1-p">Select Tips %</p>
+      <p class="error3 con1-p">Can't be zero !</p>
       <div class="btn-holder" id="btn-holder">
         <button type="button" onclick="percentCounter(0.05) ; tipCounter()" class="btn">5%</button>
         <button type="button" onclick="percentCounter(0.10) ; tipCounter()" class="btn">10%</button>
@@ -38,8 +38,8 @@
         <input type="number" id="little-input" placeholder="Custom" dir="rtl"
           onkeyup="percentCounter(value/100) ; tipCounter()" class="btn">
       </div>
-      <p>Number Of People</p>
-      <p class="error2">Can't be zero !</p>
+      <p class="con1-p">Number Of People</p>
+      <p class="error2 con1-p">Can't be zero !</p>
       <input type="number" id="people-input" dir="rtl" placeholder="0" required onkeyup="tipCounter()">
     </div>
     <div class="container2">
@@ -49,7 +49,7 @@
           <p>Tip Amount</p>
           <p class="small-font">/ person</p>
         </div>
-        <h1 id="amount">$0.00</h1>
+        <h1 id="amount" class="con2-h1">$0.00</h1>
       </div>
 
       <div class="holder">
@@ -57,7 +57,7 @@
           <p>Total</p>
           <p class="small-font">/ person</p>
         </div>
-        <h1 id="total">$0.00</h1>
+        <h1 id="total" class="con2-h1">$0.00</h1>
       </div>
 
       <button type="button" id="reset-btn" onclick="reset()">RESET</button>

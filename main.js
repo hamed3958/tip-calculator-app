@@ -16,19 +16,24 @@ function tipCounter() {
     total.innerHTML = ("$" + totalResult.toPrecision(3));
   } else if (bill.value <= 0) {
     document.querySelector('.error1').style.visibility = 'visible';
+    document.querySelector("#bill-input").style.border = "2px solid #E17052";
     setTimeout(() => {
       document.querySelector('.error1').style.visibility = 'hidden';
-    }, 1500);
+      document.querySelector("#bill-input").style.border = "1px solid #f3f9fa";
+    }, 2000);
   } else if (percent <= 0) {
     document.querySelector('.error3').style.visibility = 'visible';
     setTimeout(() => {
       document.querySelector('.error3').style.visibility = 'hidden';
-    }, 1500);
+    }, 2000);
   } else if (people.value <= 0) {
     document.querySelector('.error2').style.visibility = 'visible';
+    document.querySelector("#people-input").style.border = "2px solid #E17052";
     setTimeout(() => {
+      document.querySelector("#people-input").style.border = "1px solid #f3f9fa";
       document.querySelector('.error2').style.visibility = 'hidden';
-    }, 1500);
+    }, 2000);
+    
   }
 }
 
