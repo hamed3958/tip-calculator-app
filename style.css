@@ -159,6 +159,8 @@ p + input {
 .holder > h1 {
   color: #26c2ae;
   font-size: 48px;
+  max-width: 220px;
+  display:inline; 
 }
 
 .holder {
@@ -184,7 +186,8 @@ p + input {
 }
 
 .error1,
-.error2 {
+.error2,
+.error3 {
   visibility: hidden;
   margin-left: auto;
   color: red !important;

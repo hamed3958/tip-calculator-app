@@ -2,7 +2,7 @@ var bill = document.getElementById("bill-input");
 var people = document.getElementById("people-input");
 var total = document.querySelector("#total");
 var amount = document.querySelector("#amount");
-var percent;
+var percent = 0;
 
 function percentCounter(value) {
   percent = value;
@@ -12,8 +12,8 @@ function tipCounter() {
   if (bill.value > 0 && people.value > 0 && percent > 0) {
     let result = bill.value * percent / people.value;
     let totalResult = bill.value * percent;
-    amount.innerHTML = ("$" + result.toFixed(2));
-    total.innerHTML = ("$" + totalResult.toFixed(2));
+    amount.innerHTML = ("$" + result.toPrecision(3));
+    total.innerHTML = ("$" + totalResult.toPrecision(3));
   } else if (bill.value <= 0) {
     document.querySelector('.error1').style.visibility = 'visible';
     setTimeout(() => {
