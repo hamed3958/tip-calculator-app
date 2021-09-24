@@ -28,13 +28,13 @@
       <p class="error1">Can't be zero !</p>
       <input type="number" id="bill-input" dir="rtl" placeholder="0" required autofocus onkeyup="tipCounter()">
       <p>Select Tips %</p>
-      <div class="btn-holder">
+      <div class="btn-holder" id="btn-holder">
         <button type="button" onclick="percentCounter(0.05)" class="btn">5%</button>
         <button type="button" onclick="percentCounter(0.10)" class="btn">10%</button>
         <button type="button" onclick="percentCounter(0.15)" class="btn">15%</button>
         <button type="button" onclick="percentCounter(0.25)" class="btn">25%</button>
         <button type="button" onclick="percentCounter(0.50)" class="btn">50%</button>
-        <input type="number" id="little-input" placeholder="Custom" dir="rtl" onclick="percentCounter(value)" class="btn">
+        <input type="number" id="little-input" placeholder="Custom" dir="rtl" onkeyup="percentCounter(value/100)" class="btn">
       </div>
       <p>Number Of People</p>
       <p class="error2">Can't be zero !</p>

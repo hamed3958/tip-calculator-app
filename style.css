@@ -118,7 +118,7 @@ button {
   transition-duration: 0.5s;
 }
 
-button:hover {
+.active, .btn:hover {
   background-color: #9fe8df;
   color: #00474b;
   border: 1px solid #9fe8df;

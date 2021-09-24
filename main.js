@@ -8,8 +8,6 @@ function percentCounter(value) {
   percent = value;
 }
 
-console.log(percent)
-
 function tipCounter() {
   if (bill.value > 0 && people.value > 0) {
     let result = bill.value * percent / people.value;
@@ -40,4 +38,28 @@ function reset() {
   document.getElementById("little-input").value = "";
   document.querySelector('.error1').style.visibility = 'hidden';
   document.querySelector('.error2').style.visibility = 'hidden';
+  document.getElementsByClassName("active")[0].classList.remove("active");
+}
+
+//  btn active  //
+
+// Get the container element
+var btnContainer = document.getElementById("btn-holder");
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("btn");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function () {
+    var current = document.getElementsByClassName("active");
+
+    // If there's no active class
+    if (current.length > 0) {
+      current[0].className = current[0].className.replace(" active", "");
+    }
+
+    // Add the active class to the current/clicked button
+    this.className += " active";
+  });
 }
