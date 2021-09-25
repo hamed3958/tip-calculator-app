@@ -107,6 +107,10 @@ input:focus{
   border: 2px solid #26C2AE;
 }
 
+.error-border{
+ border:  2px solid #E17052;
+}
+
 .btn {
   cursor: pointer;
   width: 117px;

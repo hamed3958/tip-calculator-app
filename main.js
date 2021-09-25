@@ -23,10 +23,10 @@ function tipCounter() {
     total.innerHTML = ("$" + totalResult.toPrecision(3));
   } else if (bill.value <= 0) {
     document.querySelector('.error1').style.visibility = 'visible';
-    document.querySelector("#bill-input").style.border = "2px solid #E17052";
+    document.querySelector("#bill-input").classList.add("error-border");
     setTimeout(() => {
       document.querySelector('.error1').style.visibility = 'hidden';
-      document.querySelector("#bill-input").style.border = "1px solid #f3f9fa";
+      document.querySelector("#bill-input").classList.remove("error-border");
     }, 2000);
   } else if (percent <= 0) {
     document.querySelector('.error3').style.visibility = 'visible';
@@ -35,9 +35,9 @@ function tipCounter() {
     }, 2000);
   } else if (people.value <= 0) {
     document.querySelector('.error2').style.visibility = 'visible';
-    document.querySelector("#people-input").style.border = "2px solid #E17052";
+    document.querySelector("#people-input").classList.add("error-border");
     setTimeout(() => {
-      document.querySelector("#people-input").style.border = "1px solid #f3f9fa";
+      document.querySelector("#people-input").classList.remove("error-border");
       document.querySelector('.error2').style.visibility = 'hidden';
     }, 2000);
   }
@@ -62,7 +62,7 @@ function reset() {
 var btnContainer = document.getElementById("btn-holder");
 
 // Get all buttons with class="btn" inside the container
-var btns = btnContainer.getElementsByClassName("btn");
+var btns = btnContainer.getElementsByClassName("act");
 
 // Loop through the buttons and add the active class to the current/clicked button
 for (var i = 0; i < btns.length; i++) {
