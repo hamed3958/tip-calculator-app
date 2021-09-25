@@ -144,6 +144,8 @@ input:focus {
   margin-bottom: 6px;
   color: #5e7a7d;
   font-size: 16px;
+  font-weight: 700;
+  line-height: 23.7px;
 }
 
 /****************************************************container2***********************************/
@@ -186,6 +188,7 @@ input:focus {
   overflow: hidden;
   color: #26c2ae;
   font-size: 48px;
+  line-height: 71px;
 }
 
 #reset-btn {
@@ -238,7 +241,7 @@ input:focus {
   }
   .container1 {
     width: 375px;
-    height: 500px;
+    height: auto;
     padding: 0 32px;
   }
   input {
@@ -251,33 +254,37 @@ input:focus {
   button,
   #little-input {
     margin: 5px 0;
-    width: 146px;
+    width: 146px !important;
     height: 48px;
   }
   .btn-holder {
-    height: auto;
-    margin-bottom: 32px;
+    height: 189px;
+    margin-bottom: 22px;
+    padding: 0;
   }
   .container2 {
     width: 327px;
     height: 257px;
-    padding: 37px 22px 24px 24px;
+    padding: 37px 22px 24px 24px !important;
   }
-
   .holder {
     width: 281px;
     height: 48px;
     margin-bottom: 20px;
   }
   .con2-h1 {
-    font-size: 32px;
+    font-size: 32px !important;
+    line-height: 48px;
+    overflow: hidden;
+    max-width: 120px;
+    height: 47px;
   }
   .p-holder {
     padding-top: 5px;
   }
   #reset-btn {
-    width: 281px;
+    width: 281px !important;
     height: 48px;
-    margin-top: 12px;
+    margin: 12px 0 24px 0;
   }
 }

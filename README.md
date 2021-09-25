@@ -1,5 +1,4 @@
 # Frontend Mentor - Tip calculator app solution
-
 This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX).
 
 ### The challenge
@@ -18,20 +17,34 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
+- Responsive Web Design
 - JavaScript interactive behavior
 
 ### What I learned
-I used this condition to declare need to filling inputs, which disappears after 1.5 seconds :
+I used this condition to declare need to filling inputs, which disappears after 2 seconds :
 
 ```js
-if (people.value <= 0) {
-    document.querySelector('.error2').style.visibility = 'visible';
-    document.querySelector("#people-input").focus();
+if (bill.value <= 0) {
+    document.querySelector('.error1').style.visibility = 'visible';
+    document.querySelector("#bill-input").classList.add("error-border");
     setTimeout(() => {
-      document.querySelector('.error2').style.visibility = 'hidden';
-    }, 1500);
+      document.querySelector('.error1').style.visibility = 'hidden';
+      document.querySelector("#bill-input").classList.remove("error-border");
+    }, 2000);
+```
+
+And function to control font size for when characters become too large :
+
+```js
+function length(x, y) {
+  if (x.length > 6) {
+    document.getElementById(y).style.fontSize = "36px";
+  } else {
+    document.getElementById(y).style.fontSize = "48px";
+  }
+}
+
+length(amount.innerHTML, "amount");
 ```
 
 ## Author
