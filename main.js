@@ -4,11 +4,18 @@ var total = document.querySelector("#total");
 var amount = document.querySelector("#amount");
 var percent = 0;
 
+document.getElementById("reset-btn").disabled = true;
+
 function percentCounter(value) {
   percent = value;
 }
 
 function tipCounter() {
+
+  if (bill.value != "" || people.value != "" || percent != 0) {
+    document.getElementById("reset-btn").disabled = false;
+  }
+
   if (bill.value > 0 && people.value > 0 && percent > 0) {
     let result = bill.value * percent / people.value;
     let totalResult = bill.value * percent;
@@ -33,11 +40,11 @@ function tipCounter() {
       document.querySelector("#people-input").style.border = "1px solid #f3f9fa";
       document.querySelector('.error2').style.visibility = 'hidden';
     }, 2000);
-    
   }
 }
 
 function reset() {
+  document.getElementById("reset-btn").disabled = true;
   percent = 0;
   bill.value = null;
   people.value = null;
@@ -47,7 +54,6 @@ function reset() {
   if (document.getElementsByClassName("active")[0]) {
     document.getElementsByClassName("active")[0].classList.remove("active");
   }
-
 }
 
 //  btn active  //

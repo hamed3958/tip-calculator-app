@@ -15,15 +15,9 @@ body {
   justify-content: center;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
+html,
+body {
+  min-width: 375px;
 }
 
 #img-div {
@@ -44,6 +38,8 @@ input[type="number"] {
   padding: 32px;
 }
 
+/*****************************************.container1*************************/
+
 .container1 {
   width: 413px;
   height: 417px;
@@ -53,43 +49,42 @@ input[type="number"] {
   padding: 13px 16px 16px 16px;
 }
 
-.container2 {
-  background-color: #00474b;
-  width: 413px;
-  height: 417px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  border-radius: 15px;
-  padding: 40px;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-/*****************************************.container1*************************/
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 
 input {
-  background-color: #bbf5f5;
+  background-color: #9FE8DF;
   width: 380px;
   height: 48px;
-  border: 1px solid #f3f9fa;
+  border: 1px solid #9FE8DF;
   border-radius: 5px;
-  padding: 5px 15px;
-  transition: 0.3s;
+  padding: 5px 16px;
   font-size: 24px;
   font-weight: bold;
   font-family: "Space Mono", monospace;
+  line-height: 36px;
+  font-style: normal;
   color: #00474b;
 }
 
-input:focus {
-  outline: none !important;
-  border: 2px solid #26c2ae;
-}
 
 #little-input {
+  cursor: pointer;
   width: 117px;
   height: 48px;
-  padding: 5px 12px;
-  font-size: 24px;
+  background-color: #9FE8DF;
+  color: #547878;
+  text-align: center;
+  padding: 5px 10px !important;
+  color: #00474B;
 }
 
 #bill-input {
@@ -107,7 +102,12 @@ input:focus {
   background-position-x: 15px;
 }
 
-button {
+input:focus{
+  outline: none;
+  border: 2px solid #26C2AE;
+}
+
+.btn {
   cursor: pointer;
   width: 117px;
   height: 48px;
@@ -121,7 +121,8 @@ button {
   transition-duration: 0.5s;
 }
 
-.active, .btn:hover {
+.active,
+.btn:hover {
   background-color: #9fe8df;
   color: #00474b;
   border: 1px solid #9fe8df;
@@ -136,14 +137,32 @@ button {
   padding: 10px 0;
 }
 
-.con1-p{
+.con1-p {
   margin-bottom: 6px;
   color: #5e7a7d;
   font-size: 16px;
 }
 
-
 /****************************************************container2***********************************/
+
+.container2 {
+  background-color: #00474b;
+  width: 413px;
+  height: 417px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.holder {
+  width: 333px;
+  height: 71px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
 
 .small-font {
   font-size: 13px;
@@ -161,29 +180,26 @@ button {
 .con2-h1 {
   color: #26c2ae;
   font-size: 48px;
-  max-width: 220px; 
-}
-
-.holder {
-  width: 333px;
-  height: 71px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  max-width: 220px;
 }
 
 #reset-btn {
   width: 333px;
   height: 48px;
-  background-color: #26c2ae;
+  background-color: #9FE8DF;
   color: #00474b;
   font-size: 20px;
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
   margin-top: 122px;
   border: 1px solid #00474b;
+  border-radius: 5px;
 }
 
-#reset-btn:hover {
-  color: #ffffff;
+#reset-btn[disabled=disabled], #reset-btn:disabled {
+  border: 1px solid #00474B;
+  background-color: #0D686D;
+  color: #00474B;
 }
 
 .error1,
@@ -206,25 +222,24 @@ button {
 /*************************** media query ****************************/
 
 @media screen and (max-width: 920px) {
+  #img-div {
+    margin: 50px 0 40px 0;
+  }
   .container {
     width: 375px;
     height: 789px;
-    padding: 24px;
+    padding: 32px 24px;
   }
   .container1 {
     width: 375px;
-    padding: 20px 32px;
-  }
-  .container2 {
-    width: 327px;
-    height: 256px;
-    padding: 37px 24px;
-    margin-top: 32px;
+    height: 500px;
+    padding: 0 32px;
   }
   input {
     width: 310px;
   }
-  #bill-input {
+  #bill-input,
+  #people-input {
     margin-bottom: 32px;
   }
   button,
@@ -237,9 +252,26 @@ button {
     height: auto;
     margin-bottom: 32px;
   }
+  .container2 {
+    width: 327px;
+    height: 257px;
+    padding: 37px 22px 24px 24px;
+  }
+
+  .holder {
+    width: 281px;
+    height: 48px;
+    margin-bottom: 20px;
+  }
+  .con2-h1 {
+    font-size: 32px;
+  }
+  .p-holder {
+    padding-top: 5px;
+  }
   #reset-btn {
     width: 281px;
     height: 48px;
-    margin-top: 0;
+    margin-top: 12px;
   }
 }
