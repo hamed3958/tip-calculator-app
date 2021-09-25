@@ -61,10 +61,10 @@ input[type="number"] {
 }
 
 input {
-  background-color: #9FE8DF;
+  background-color: #9fe8df;
   width: 380px;
   height: 48px;
-  border: 1px solid #9FE8DF;
+  border: 1px solid #9fe8df;
   border-radius: 5px;
   padding: 5px 16px;
   font-size: 24px;
@@ -75,16 +75,15 @@ input {
   color: #00474b;
 }
 
-
 #little-input {
   cursor: pointer;
   width: 117px;
   height: 48px;
-  background-color: #9FE8DF;
+  background-color: #9fe8df;
   color: #547878;
   text-align: center;
   padding: 5px 10px !important;
-  color: #00474B;
+  color: #00474b;
 }
 
 #bill-input {
@@ -102,13 +101,13 @@ input {
   background-position-x: 15px;
 }
 
-input:focus{
+input:focus {
   outline: none;
-  border: 2px solid #26C2AE;
+  border: 2px solid #26c2ae;
 }
 
-.error-border{
- border:  2px solid #E17052;
+.error-border {
+  border: 2px solid #e17052;
 }
 
 .btn {
@@ -182,15 +181,17 @@ input:focus{
 }
 
 .con2-h1 {
+  max-width: 220px;
+  height: 70px;
+  overflow: hidden;
   color: #26c2ae;
   font-size: 48px;
-  max-width: 220px;
 }
 
 #reset-btn {
   width: 333px;
   height: 48px;
-  background-color: #9FE8DF;
+  background-color: #9fe8df;
   color: #00474b;
   font-size: 20px;
   font-family: "Space Mono", monospace;
@@ -200,10 +201,11 @@ input:focus{
   border-radius: 5px;
 }
 
-#reset-btn[disabled=disabled], #reset-btn:disabled {
-  border: 1px solid #00474B;
-  background-color: #0D686D;
-  color: #00474B;
+#reset-btn[disabled="disabled"],
+#reset-btn:disabled {
+  border: 1px solid #00474b;
+  background-color: #0d686d;
+  color: #00474b;
 }
 
 .error1,

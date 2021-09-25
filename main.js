@@ -21,6 +21,10 @@ function tipCounter() {
     let totalResult = bill.value * percent;
     amount.innerHTML = ("$" + result.toPrecision(3));
     total.innerHTML = ("$" + totalResult.toPrecision(3));
+
+    length((amount.innerHTML), "amount");
+    length((total.innerHTML), "total");
+
   } else if (bill.value <= 0) {
     document.querySelector('.error1').style.visibility = 'visible';
     document.querySelector("#bill-input").classList.add("error-border");
@@ -54,6 +58,8 @@ function reset() {
   if (document.getElementsByClassName("active")[0]) {
     document.getElementsByClassName("active")[0].classList.remove("active");
   }
+  document.getElementById("amount").style.fontSize = "48px";
+  document.getElementById("total").style.fontSize = "48px";
 }
 
 //  btn active  //
@@ -77,4 +83,12 @@ for (var i = 0; i < btns.length; i++) {
     // Add the active class to the current/clicked button
     this.className += " active";
   });
+}
+
+function length(x, y) {
+  if (x.length > 6) {
+    document.getElementById(y).style.fontSize = "36px";
+  } else {
+    document.getElementById(y).style.fontSize = "48px";
+  }
 }
